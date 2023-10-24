@@ -1,0 +1,39 @@
+<section class="py-5">
+    <div *ngFor="let i of pdata" class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-3"><img class="card-img-top mb-md-0 w-100" style="height: 200px;" src={{i.image}}
+                    alt="..." /></div>
+            <div class="col-md-4">
+
+                <div class="small mb-1 text-primary"></div>
+                <h2 class=" ">{{i.pname}}</h2>
+                <div class="fs-5">
+                    <span class="">{{i.description}}</span><br>
+                    <span style="color: rgb(0, 0, 0)"><b>Rs {{i.price}}</b></span>
+                </div>
+                <p class="lead text-capitalize"><b>{{i.rating}}</b> Rating</p>
+                <p class="lead text-capitalize"> <b></b></p>
+            </div>
+
+            <div class="col-md-1">
+                <div class="fs-5 mt-5">
+                    <br>
+                    <button (click)="decrement(i._id)" class="btn btn-dark"> -</button>
+                        <p class="w-25">{{i.quantity}}</p>
+                    <button (click)="increment(i._id)" class="btn btn-dark"> + </button>
+                    <br>
+                    <span style="color: rgb(0, 0, 0)"><b>Rs.{{i.totalPrice}}</b></span>
+                </div>
+                <!-- <button class="btn btn-warning mt-3"><b>Buy Now</b></button> -->
+            </div>
+
+            <div class="col-md-4">
+                <button (click)="remove(i._id)" class="btn btn-danger mt-5"><b>Remove</b></button>
+            </div>
+        </div>
+        <hr >
+    </div>
+    <div class="text-end me-5">
+        <h4 class="pe-5 me-5">Cart Total Price {{total}} Rs.</h4>
+    </div>
+</section>

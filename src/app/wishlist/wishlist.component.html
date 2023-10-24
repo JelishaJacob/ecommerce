@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of pdata,let j=index">
+            <th class="">{{j+1}}</th>
+            <td class="">
+                <h5>{{i.pname}}</h5>
+                <img style="height: 100px;" class="w-50" src="{{i.image}}" alt="">
+            </td>
+            <td class=""><h6>{{i.description}}</h6></td>
+            <td class="">Rs. {{i.price}}</td>
+            <td class="border">
+                <button (click)="removeItem(i._id)" class="btn btn-danger ms-4 mt-4 w-75">Remove</button><br>
+                <button (click)="addToCart(i.pId,i._id)" class="btn btn-success ms-4 mt-4 w-75">Move To Cart</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

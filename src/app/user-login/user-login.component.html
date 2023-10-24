@@ -1,0 +1,21 @@
+<div class="mb-4 pb-5">
+    <h1 class="text-center mt-5">Login</h1>
+    <form [formGroup]="userLoginForm" action=""
+        class="w-25 text-center bg-dark pb-4 pt-5 ps-4 pe-4 rounded container mt-4 mb-2">
+        <input formControlName="email" name="email" id="email" type="text" placeholder="Email" class="form-control">
+        <br>
+        <div *ngIf="this.userLoginForm.get('email')?.errors && this.userLoginForm.get('email')?.touched">
+            <p class="text-danger">*Please Provide Valid Emial Id</p>
+        </div>
+
+        <input formControlName="psw" name="p1" id="p1" type="password" placeholder="PassWord" class="form-control ">
+        <br>
+        <div *ngIf="this.userLoginForm.get('psw')?.errors && this.userLoginForm.get('psw')?.touched">
+            <p class="text-danger">*Please Include Charecters, Numbers and Special Charecters</p>
+        </div>
+        <button (click)="userLogin()" type="button" class="btn btn-outline-light">Login</button>
+    </form>
+    <div class="text-center">
+        <p>Not registered yet? <a routerLink='/user-register'>register</a></p>
+    </div>
+</div>

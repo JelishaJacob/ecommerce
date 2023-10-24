@@ -1,0 +1,24 @@
+<div class="text-center m-5">
+  <h1>Manage Users</h1>
+   
+  <table class="table table-dark table-striped mt-4 p-5">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Email</th>
+          <th scope="col">Password</th>
+          <th scope="col">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of users,let j=index">
+          <th class="">{{j+1}}</th>
+          <td class="">{{i.email}}</td>
+          <td class="">{{i.psw}}</td>
+          <td class="">
+            <button (click)="deleteUser(i._id)" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

@@ -1,0 +1,38 @@
+<div class="text-center m-5">
+    <h1>Manage Products</h1>
+    <div class="text-end">
+        <button (click)="addProduct()" class="btn btn-dark p-2">Add New Product</button>
+    </div>    
+    <table class="table table-dark table-striped mt-4 p-5">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Image</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Rating</th>
+            <th scope="col">Count</th>
+            <th scope="col"></th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of pdata,let j=index">
+            <th class="border p-2">{{j+1}}</th>
+            <td class="border p-2">{{i.pname}}</td>
+            <td class="border p-2">
+              <img style="height: 100px;" src="{{i.image}}" alt="">
+            </td>
+            <td class="border p-2">{{i.description}}</td>
+            <td class="border p-2">{{i.price}}</td>
+            <td class="border p-2">{{i.rating}}</td>
+            <td class="border p-2">{{i.count}}</td>
+            <td class="">
+              <button (click)="editPage(i._id)" class="btn btn-warning mt-4"><i class="fa-solid fa-pen-to-square"></i></button>
+              <button (click)="remove(i._id)" class="btn btn-danger ms-4 mt-4"><i class="fa-solid fa-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

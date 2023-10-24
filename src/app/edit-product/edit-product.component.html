@@ -1,0 +1,18 @@
+<div>
+    <h1 class="text-center mt-4">Edit Product</h1>
+    <form (ngSubmit)="update()" action="" class="w-50 container text-center rounded border bg-light p-4 my-4">
+        <input [(ngModel)]="pdata.pname" type="text" name="p1" id="pn" placeholder="Product Name" class="form-control mt-2">
+        <input [(ngModel)]="pdata.description" type="text" name="d1" id="dc" placeholder="Description" class="form-control mt-2">
+        <input [(ngModel)]="pdata.price" type="text" name="price" id="price" placeholder="Price" class="form-control mt-2">
+        <input [(ngModel)]="pdata.image" type="text" name="image" id="image" placeholder="Image" class="form-control mt-2">
+        <input [(ngModel)]="pdata.rating" type="text" name="rate" id="rate" placeholder="Rating" class="form-control mt-2">
+        <input [(ngModel)]="pdata.count" type="text" name="c1" id="c1" placeholder="Count" class="form-control mt-2">
+        <button type="submit" class="btn btn-outline-dark p-2 mt-4 w-50">Edit Product</button>
+    </form>
+</div>
+<!-- pname: String,
+description: String,
+price: Number,
+image: String,
+rating: Number,
+count: Number -->

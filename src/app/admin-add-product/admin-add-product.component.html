@@ -1,0 +1,14 @@
+<div>
+    <h1 class="text-center mt-4">Add Product</h1>
+    <form [formGroup]="addProductForm" action="" class="w-50 container rounded border bg-light p-4 my-4">
+        <input formControlName="pname" type="text" name="p1" id="pn" placeholder="Product Name" class="form-control mt-2">
+        <input formControlName="description" type="text" name="d1" id="dc" placeholder="Description" class="form-control mt-2">
+        <input formControlName="price" type="text" name="price" id="price" placeholder="Price" class="form-control mt-2">
+        <input formControlName="image" type="text" name="image" id="image" placeholder="Image" class="form-control mt-2">
+        <input formControlName="rating" type="text" name="rate" id="rate" placeholder="Rating" class="form-control mt-2">
+        <input formControlName="count" type="text" name="c1" id="c1" placeholder="Count" class="form-control mt-2">
+        <button (click)="add()" class="btn btn-outline-dark p-2 ms-5 mt-4 w-50">Add Product</button>
+        <button class="btn btn-outline-dark p-2 ms-5 mt-4 w-25"><a href="admin-productmng" style="text-decoration: none;color: black;">Back</a></button>
+
+    </form>
+</div>

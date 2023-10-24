@@ -1,0 +1,16 @@
+<div class="mb-3 pb-4">
+    <h1 class="text-center mt-5">Admin Login</h1>
+    <form (ngSubmit)="adminlogin()" [formGroup]="adminLoginForm" action="" class="w-25 text-center bg-dark p-5 rounded container mt-5 mb-5">
+        <input formControlName="auname" name="u1" id="an" type="text" placeholder="UserName" class="form-control"> <br>
+        <div *ngIf="this.adminLoginForm.get('auname')?.errors && this.adminLoginForm.get('auname')?.touched">
+            <p class="text-danger">*Accept Numbers and Charecters Only</p>
+        </div>
+
+        <input formControlName="apasw" name="p1" id="ap" type="password" placeholder="PassWord" class="form-control "> <br>
+        <div *ngIf="this.adminLoginForm.get('apasw')?.errors && this.adminLoginForm.get('apasw')?.touched">
+            <p class="text-danger">*Please Include Charecters, Numbers and Special Charecters</p>
+        </div>
+
+        <button type="submit" class="btn btn-outline-light">Login</button>
+    </form>
+</div>

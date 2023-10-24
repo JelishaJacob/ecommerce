@@ -1,0 +1,17 @@
+<nav class="navbar bg-dark">
+    <div class="col-md-9 container">
+        <a class="navbar-brand text-white" href="#">
+            <i class="fa-solid fa-cart-shopping fa-xl"></i>
+            <span class="fs-4 ms-2">Shoppy</span>
+        </a>
+    </div>
+    <div *ngIf="login" class="col-md-3 ms-auto">
+        <div (click)="cartPage()" class="btn bg-light text-end ms-5 me-2">
+            <h6 class="pt-1">Cart {{count}}</h6>
+        </div>
+        <i (click)="toWishlist()" class="fa-solid fa-heart fa-2x text-danger btn me-3"></i>
+        <button (click)="logout()" class="btn btn-light pt-2"><h6>Logout</h6></button>
+        
+        
+    </div>
+</nav>
